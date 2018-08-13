@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:icon="@drawable/ic_action_menu">
+    <item
+        android:id="@+id/action_addrecipe"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_add"
+        android:title="@string/adminMenuAdd"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_delete_recipe"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_delete"
+        android:title="@string/adminMenuDel"
+        app:showAsAction="never" />
+
+</menu>

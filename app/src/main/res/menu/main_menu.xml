@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+
+    android:icon="@drawable/ic_action_menu"
+    >
+
+    <item
+        android:id="@+id/action_admin"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_add"
+        android:title="@string/adminMenuAdd"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_admin_delete"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_delete"
+        android:title="@string/adminMenuDel"
+        app:showAsAction="never" />
+
+</menu>

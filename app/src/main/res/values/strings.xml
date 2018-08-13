@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Healthy Recipes</string>
+    <string name="defaultName">[NO NAME]</string>
+    <string name="title_activity_recipe_admin">Recipe Admin</string>
+    <!-- button texts -->
+    <string name="addbtn">Add</string>
+    <string name="breadTitle">Breads</string>
+    <string name="fruitTitle">Fruits</string>
+    <string name="vegTitle">Vegetables</string>
+    <string name="soupTitle">Soups</string>
+    <string name="delfromlist">Delete from list >></string>
+
+    <!-- recipe add form -->
+    <string name="recipeAdminTitle">Add New Recipe\n(Fill out form and click Add)</string>
+    <string name="recipeAdminName">Enter Recipe Name (30 Chars. Max.)</string>
+    <string name="recipeAdminSelectCat">Select Category</string>
+    <string name="recipeAdminIngredients">Enter Ingredients List (30 Lines Max.)</string>
+    <string name="recipeAdminInstructions">Enter Preparation Instructions (30 Lines Max.)</string>
+    <string name="recipeNameHint">Enter recipe name (ex. Chicken Noodle Soup)</string>
+    <string name="recipeIngHint">Enter ingredients.\nex.\n1 cup diced chicken\n1 tbsp. oregano\n3 cups water or broth</string>
+    <string name="recipeInstHint">Enter instructions.\nex.\nBring to boil.\nReduce heat and simmer for 30 minutes.</string>
+    <string name="action_next">Next</string>
+    <string name="addSubtitle">Add New Recipe</string>
+    <!-- delete page -->
+    <string name="action_delete">Delete Selected</string>
+    <string name="delSubtitle">Delete Recipe(s)</string>
+
+    <!-- messages and misc -->
+    <string name="delete_missing">Nothing selected to be deleted.</string>
+    <string name="delete_confirm_msg">\n\nAre you sure you want to delete selected recipe(s)?</string>
+    <string name="loadError">No recipe(s) on file for category </string>
+    <string name="notice">Notice</string>
+    <string name="checkall">Check All</string>
+    <string name="uncheckall">Uncheck All</string>
+    <string name="image">Image</string>
+    <string name="textline">(text object)</string>
+    <string name="ingredientsLabel">Ingredients:</string>
+    <string name="instructionsLabel">Instructions:</string>
+    <string name="delete_title">Select Recipes To Delete</string>
+    <string name="err">Error</string>
+    <string name="goBack">Please go back and check your entries.</string>
+    <string name="reqName">Recipe name is required.</string>
+    <string name="reqCat">Recipe category is required.</string>
+    <string name="reqIng">Recipe ingredients are required.</string>
+    <string name="reqInst">Recipe instructions are required.</string>
+    <!-- category dropdown list -->
+    <string-array name="category_array">
+        <item>Breads</item>
+        <item>Fruits</item>
+        <item>Vegetables</item>
+        <item>Soups</item>
+    </string-array>
+    <!-- main menu texts -->
+    <string name="adminMenuAdd">Add Recipe</string>
+    <string name="adminMenuDel">Delete Recipe</string>
+    <string name="rloading">Loading…</string>
+    <string name="viewSubtitle">Recipe List</string>
+</resources>

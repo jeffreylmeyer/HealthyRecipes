@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RecipePagerActivity"
+    tools:showIn="@layout/activity_recipe_pager">
+
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/pagertoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="spread"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:subtitleTextColor="#A0A080"
+        app:titleTextColor="#FFFFFF" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/scantoolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pagertoolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="top|center_horizontal|center|start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recipeCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal|center"
+                android:gravity="top|center_horizontal|center"
+                android:text="@string/textline"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="68dp"
+                tools:layout_editor_absoluteY="114dp" />
+
+            <TextView
+                android:id="@+id/numRecipes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textline"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/recipeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/textline"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ingredientsLabel"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/recipeIngredients"
+                style="@android:style/Widget.DeviceDefault.Light.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="147dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="30"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                android:selectAllOnFocus="true"
+                android:text="@string/textline"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/instructionsLabel"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/recipeInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="30"
+                android:text="@string/textline"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/scantoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:minHeight="?attr/actionBarSize"
+
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_default="spread">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="left|center_vertical"
+            android:gravity="center_vertical|center_horizontal|center|fill"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="10dp">
+
+            <ImageButton
+                android:id="@+id/prevButton"
+                style="@android:style/Widget.Holo.ImageButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/image"
+                android:onClick="previousRec"
+                android:textAlignment="center"
+                app:srcCompat="@drawable/ic_action_previous"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="498dp" />
+
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:onClick="nextRec"
+                style="@android:style/Widget.Holo.ImageButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/image"
+
+                android:textAlignment="center"
+                app:srcCompat="@drawable/ic_action_forward"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="498dp" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme.NoActionBar"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_default="spread"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintWidth_default="spread"
+    tools:context=".RecipeAdmin"
+    tools:showIn="@layout/activity_recipe_admin">
+
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="spread"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:subtitleTextColor="#A0A080"
+        app:titleTextColor="#FFFFFF" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:measureWithLargestChild="true"
+            android:orientation="vertical"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollIndicators="right"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical"
+            android:showDividers="beginning"
+            android:textAlignment="center"
+            android:verticalScrollbarPosition="right"
+            android:visibility="visible"
+
+            tools:layout_editor_absoluteX="16dp"
+            tools:scrollbarStyle="insideOverlay">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="horizontal|vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/saveBTN2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginStart="4dp"
+                    android:layout_row="0"
+                    android:text="@string/addbtn"
+                    android:theme="@style/Base.Widget.AppCompat.Button.Colored" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="top|end"
+                    android:layout_marginEnd="5dp"
+                    android:layout_row="0"
+                    android:enabled="true"
+                    android:fadingEdge="vertical"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:onClick="deleteRecipe"
+                    android:text="@string/delfromlist"
+                    android:textColor="@android:color/holo_red_dark" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/recipeAdminTitle"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|end"
+                android:layout_marginStart="5dp"
+                android:gravity="fill_horizontal|start|end"
+
+                android:singleLine="true"
+                android:text="@string/recipeAdminName"
+                android:textSize="14sp"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/recipeNameTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@color/fieldsNormal"
+                android:ems="10"
+                android:hint="@string/recipeNameHint"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:nextFocusDown="@+id/categorylist" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/recipeAdminSelectCat"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/categorylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:contextClickable="true"
+
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/ingredientsTB" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|end"
+                android:layout_marginTop="10sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/recipeAdminIngredients"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ingredientsTB"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@color/fieldsNormal"
+                android:ems="10"
+                android:hint="@string/recipeIngHint"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine|textCapWords"
+                android:maxLines="30"
+                android:nextFocusDown="@+id/instructionsTB"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/recipeAdminInstructions"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/instructionsTB"
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/fieldsNormal"
+                android:ems="10"
+                android:hint="@string/recipeInstHint"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine|textCapWords"
+                android:maxLines="30"
+                android:nextFocusDown="@+id/saveBTN"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="false" />
+
+            <Button
+                android:id="@+id/saveBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="4dp"
+                android:text="@string/addbtn"
+                android:theme="@style/Base.Widget.AppCompat.Button.Colored" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
